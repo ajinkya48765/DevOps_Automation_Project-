@@ -30,7 +30,7 @@ This is all about Git and Github configuration.
 # 2. Building Production System
 Here I have started with the first automatic job of jenkins. This job will triggered by manipulation of master branch.
 
-
+https://github.com/ajinkya48765/DevOps_Automation_Project-/blob/master/code_snippet%20job1
 
 # 3. Docker setup
 * I have installed latest version of docker in my machine I am using docker-ce.
@@ -46,28 +46,7 @@ Here I have started with the first automatic job of jenkins. This job will trigg
 
 * I have provided integration of all the commands in the below snippet.
 
-`sudo cp -vrf * /var/lib/docker/volumes/auto/_data`  
-
-`sudo chmod 666 /var/run/docker.sock` 
-
-`if docker ps | grep server`
-
-`then`
-
-`echo "already running"`
-
-`elif docker ps -a | grep server`
-
-`then`
-
-`sudo docker start server`
-
-`else`
-
-`sudo docker run -dti --name server -v auto:/var/www/html -p 7081:80 httpd `   
-
-`fi`
-
+   https://github.com/ajinkya48765/DevOps_Automation_Project-/blob/master/code_snippet%20job1
 
 
 # 4. Testing System
@@ -77,27 +56,7 @@ Here I have started with the first automatic job of jenkins. This job will trigg
 
 * In this job I have to keep an eye on developer branch so I have added here (Branch Specifier) developer.
 
-`sudo cp -frv * /var/lib/docker/volumes/testing_auto/_data`
 
-`sudo chmod 666 /var/run/docker.sock`
-
-`if docker ps | grep test_env `
-
-`then` 
-
-`echo "already running "`
-
-`elif docker ps -a | grep test_env`
-
-`then`
-
-`sudo docker start test_env`
-
-`else`
-
-`sudo docker run -dti --name test_env -v testing_auto:/var/www/html -p 7082:80 httpd `
- 
- `fi`
 As we did in Job here also we have to consider all those things.
 
 * Till now we are so much clear that we have provided our code to testing team and they are testing it but what after they are sure that this is safe and sound website. Hence we have our third job
