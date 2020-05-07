@@ -1,0 +1,11 @@
+sudo cp -vrf * /var/lib/docker/volumes/auto/_data
+sudo chmod 666 /var/run/docker.sock
+if docker ps | grep server 
+then 
+echo "already running"
+elif docker ps -a | grep server
+then
+sudo docker start server
+else
+sudo docker run -dti --name server -v auto:/var/www/html -p 7081:80 httpd
+fi
