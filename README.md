@@ -28,9 +28,9 @@ After this configuration I made first automation by adding post-commit file in h
 This is all about Git and Github configuration.
 
 # 2. Building Production System
-Here I have started with the first automatic job of jenkins. This job will triggered by manipulation of master branch.
-
-https://github.com/ajinkya48765/DevOps_Automation_Project-/blob/master/code_snippet%20job1
+* Here I have started with the first automatic job of jenkins. This job will triggered by manipulation of master branch. 
+* Also created a webserver before starting it I ensured that whether it is already started or not.
+* Exposed it for LAN using patting and to the world using tunneling.
 
 # 3. Docker setup
 * I have installed latest version of docker in my machine I am using docker-ce.
@@ -56,7 +56,7 @@ https://github.com/ajinkya48765/DevOps_Automation_Project-/blob/master/code_snip
 
 * In this job I have to keep an eye on developer branch so I have added here (Branch Specifier) developer.
 
-
+ https://github.com/ajinkya48765/DevOps_Automation_Project-/blob/master/code%20snippet%20job%202
 As we did in Job here also we have to consider all those things.
 
 * Till now we are so much clear that we have provided our code to testing team and they are testing it but what after they are sure that this is safe and sound website. Hence we have our third job
