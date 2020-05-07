@@ -1,0 +1,12 @@
+sudo cp -frv * /var/lib/docker/volumes/testing_auto/_data
+sudo chmod 666 /var/run/docker.sock
+
+if docker ps | grep test_env 
+then 
+echo "already running "
+elif docker ps -a | grep test_env
+then
+sudo docker start test_env
+else
+sudo docker run -dti --name test_env -v testing_auto:/var/www/html -p 7082:80 httpd 
+fi
